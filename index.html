@@ -255,9 +255,55 @@
 
     
 
+    
+
 
 
 <!-- Main Content -->
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2022/05/24/难点梳理/">
+                <h2 class="post-title">
+                    BUAA_OS lab4难点梳理
+                </h2>
+                <h3 class="post-subtitle">
+                    
+                </h3>
+                <div class="post-content-preview">
+                    BUAA_OS lab40.引言一起进一步学习进程调度
+
+规则多：CP0协处理器、MIPS调用规范、汇编语法
+流程复杂：系统调用函数、页处理函数、fork函数
+细节多：栈的切换
+
+1.实验目的
+掌握系统调用的概念及流程
+实现进程间通讯机制
+实现 fork 函数
+掌握页写入异常的处理流程
+
+操作系统设计了一系列内核空间 中的函数，当用户进程需要进行这些操作时，会引发特定的异常以陷入内核态，由内......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by cjj on
+                    2022-05-24
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#BUAA-OS实验" title="BUAA-OS实验">BUAA-OS实验</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
 
     
 
@@ -382,6 +428,8 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
             
         
             
+            <a href="/tags/#BUAA-OS实验" title="BUAA-OS实验" rel="2">BUAA-OS实验</a>
+            
         
     </div>
 </section>
@@ -452,6 +500,10 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
     <ul>
       
         <li>
+          <a href="/2022/05/24/%E9%9A%BE%E7%82%B9%E6%A2%B3%E7%90%86/">BUAA_OS lab4难点梳理</a>
+        </li>
+      
+        <li>
           <a href="/2022/05/23/lab2-1-extra/">lab2-1-extra</a>
         </li>
       
@@ -483,7 +535,7 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -497,6 +549,8 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
           <a href="categories/#hexo"><li>hexo</li></a>
         
           <a href="categories/#test"><li>test</li></a>
+        
+          <a href="categories/#note"><li>note</li></a>
         
       </ul>
     </div>
@@ -669,7 +723,7 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
         
 
         
-            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;😅&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&#34;😅&#34;]' color='[&#34;rgb(121,93,179)&#34; ,&#34;rgb(76,180,231)&#34; ,&#34;rgb(184,90,154)&#34;]'></script>
         
 
         <!-- background effects end -->
@@ -679,21 +733,6 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
     
         <script src="/js/ribbonDynamic.js"></script>
     
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
