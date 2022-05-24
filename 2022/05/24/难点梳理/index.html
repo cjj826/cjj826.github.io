@@ -303,7 +303,7 @@
 <p>此修改后经过rfe，SR寄存器的KUc位会变为1，在gxemul的定义中，此时会进入用户态</p>
 </blockquote>
 <h2 id="一探到底"><a href="#一探到底" class="headerlink" title="一探到底"></a>一探到底</h2><p>内核将自己所能够提供的服务以系统调用的方式提供给用户空间，以供用户程序完成一些特殊的系统级操作。</p>
-<h2 id="系统调用机制的实现"><a href="#系统调用机制的实现" class="headerlink" title="系统调用机制的实现"></a>系统调用机制的实现</h2><p><img src="2022-05-24-难点梳理\4_syscall_process.png" alt="syscall过程流程图"></p>
+<h2 id="系统调用机制的实现"><a href="#系统调用机制的实现" class="headerlink" title="系统调用机制的实现"></a>系统调用机制的实现</h2><p><img src="2022-05-24-难点梳理/4_syscall_process.png" alt="syscall过程流程图"></p>
 <p>在用户空间的程序中，我们定义了许多的函数，以<code>writef</code>函数为例，这一函数实际上并不是最接近内核的函数，它最后会调用一个名为<code>syscall_putchar</code> 的函数，这个函数在user/syscall_lib.c中。</p>
 <p>实际上，在我们的MOS操作系统实验中，这些<code>syscall_*</code>的函数与内核中的系统调用函数（<code>sys_*</code>的函数）是<strong>一一对应</strong>的： <code>syscall_*</code>的函数是我们<strong>在用户空间中最接近内核的也是最原子的函数</strong>，而<code>sys_*</code>的函数是内核中系统调用的具体实现部分。</p>
 <p> <code>syscall_*</code>的函数的实现中，它们毫无例外都调用了msyscall函数，而且函数的第一个参数都是一个与调用名相似的宏（如<code>SYS_putchar</code>）， 在我们的MOS操作系统实验中把这个参数称为<strong>系统调用号</strong>（include/unistd.h）</p>
