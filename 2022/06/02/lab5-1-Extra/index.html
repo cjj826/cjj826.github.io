@@ -183,6 +183,20 @@
 
                         
                         <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -197,21 +211,7 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/categories/">Categories</a>
                         </li>
                         
                     
@@ -278,10 +278,10 @@
 <p>在RAID4中，数据以块为单位分布在各个磁盘上。其中前n块磁盘存储数据，第n+1块磁盘存储其余n个磁盘同级数据块（同级：不同磁盘的同一柱面、同一扇区）的奇偶校验码。</p>
 <p>基于MOS文件系统的特点和评测的方便，我们在RAID4的基础上进行修改，产生类RAID4磁盘阵列</p>
 <p>在类RAID4磁盘阵列中，数据以扇区为单位分布在各个磁盘上。为了与MOS操作系统“1个块包含8个扇区”对齐，我们将n定义为4（即共5个磁盘）。这样对于每个数据块（大小BY2PG），它的数据以及校验码恰好可以放在5个磁盘的2个同级扇区内。如图所示：</p>
-<p><img src="/2022/06/02/lab5-1-Extra/image-20220602224633896.png" alt="image-20220602224633896"></p>
-<p>本磁盘阵列中，校验码采用异或校验，由其他磁盘的同级扇区异或得到（ $S_5 &#x3D; S_1\bigoplus S_2\bigoplus S_3 \bigoplus  S_4$，其中 $S_i$ 表示第<code>i</code>个磁盘上的扇区）。得益于异或的性质，</p>
+<p><img src="image-20220602224633896.png" alt="image-20220602224633896"></p>
+<p>本磁盘阵列中，校验码采用异或校验，由其他磁盘的同级扇区异或得到（ $S_5 = S_1\bigoplus S_2\bigoplus S_3 \bigoplus  S_4$，其中 $S_i$ 表示第<code>i</code>个磁盘上的扇区）。得益于异或的性质，</p>
 <p>当一个磁盘发生损坏时，可以由其他磁盘的数据计算得到该磁盘的数据。而在测试中，我们将通过不挂载特定磁盘来模拟磁盘的损坏。</p>
-<p><img src="/2022/06/02/lab5-1-Extra/image-20220602224953646.png" alt="image-20220602224953646"></p>
+<p><img src="image-20220602224953646.png" alt="image-20220602224953646"></p>
 <p>请你实现相关函数，能够查看磁盘是否损坏，实现对磁盘阵列数据的读取和写入，保证在损坏磁盘个数不超过1个时磁盘的正常读取和写入。</p>
 <p>具体需要实现的函数如下：</p>
 <p>磁盘状态检查函数<strong>raid4_valid</strong></p>
@@ -319,7 +319,7 @@
 <ul>
 <li><p>函数原型： int raid4_read(u_int blockno, void *dst)</p>
 </li>
-<li><p>函数描述：从5个磁盘组成的磁盘阵列中读取一个数据块大小（BY2PG）的数据到目标空间 dst ~dst + BY2PG 。 blockno 为数据块序号，与各个磁盘的扇区号从0开始建立对应关系，即数据块 blockno 对应的磁盘阵列每个磁盘的扇区号为 [2 *blockno, 2 *blockno + 1] ，如上方介绍中的图。</p>
+<li><p>函数描述：从5个磁盘组成的磁盘阵列中读取一个数据块大小（BY2PG）的数据到目标空间 dst ~dst + BY2PG 。 blockno 为数据块序号，与各个磁盘的扇区号从0开始建立对应关系，即数据块 blockno 对应的磁盘阵列每个磁盘的扇区号为 [2 <em>blockno, 2 </em>blockno + 1] ，如上方介绍中的图。</p>
 </li>
 <li><p>磁盘损坏情况：</p>
 <ul>
@@ -337,6 +337,10 @@
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2022/07/01/BUAA-OS-课程笔记/" data-toggle="tooltip" data-placement="top" title="BUAA_OS_课程笔记">&larr; Previous Post</a>
+                    </li>
                     
                     
                     <li class="next">
