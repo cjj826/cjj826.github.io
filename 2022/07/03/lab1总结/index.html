@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="buaa 2022">
+    <meta name="keyword"  content="cjj, blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+    <title>
+        
+          BUAA_OS lab1总结 - 重结晶
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/2022/07/03/lab1总结/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS --> 
+    
+        
+<link rel="stylesheet" href="/css/dusign-light.css">
+
+        
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+
+        
+<link rel="stylesheet" href="/css/font-awesome.css">
+
+        
+<link rel="stylesheet" href="/css/toc.css">
+
+        <!-- background effects end -->
+    
+    
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    
+<link rel="stylesheet" href="/css/widget.css">
+
+
+    
+<link rel="stylesheet" href="/css/rocket.css">
+
+
+    
+<link rel="stylesheet" href="/css/signature.css">
+
+
+    
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- photography -->
+    
+<link rel="stylesheet" href="/css/photography.css">
+
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../../img/OS.jpg')
+                /*post*/
+            
+        
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#BUAA-OS实验" title="BUAA-OS实验">BUAA-OS实验</a>
+                            
+                        </div>
+                        <h1>BUAA_OS lab1总结</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by cjj on
+                            2022-07-03
+                        </span>
+
+                        
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count">5,049</span> and
+                                Reading Time <span class="post-count">21</span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        
+
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+    <div class="waveWrapper">
+        <div class="wave wave_before" style="background-image: url('/img/wave-light.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-light.png')"></div>
+    </div>
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">挑兮达兮，在城阙兮</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                    
+                    <li>
+                        <a href="YOUR_CHINESE_BLOG_URL" target="_blank">Chinese Blog</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h1><ol>
+<li>从操作系统角度理解MIPS体系结构</li>
+<li>掌握操作系统启动的基本流程</li>
+<li>掌握ELF文件的结构和功能</li>
+<li>完成printf函数的编写</li>
+</ol>
+<blockquote>
+<p>我们编写的所有代码，可以在提供的Linux 平台通过<code>Makefile</code>交叉编译产生可执行文件。最后我们使用<code>GXemul</code>对可执行文件运行填充完成操作系统。</p>
+</blockquote>
+<h1 id="操作系统内核"><a href="#操作系统内核" class="headerlink" title="操作系统内核"></a>操作系统内核</h1><p>关键是放置位置，将硬件初始化的相关工作放在名为“bootloader”的程序中</p>
+<h1 id="boot-loader"><a href="#boot-loader" class="headerlink" title="boot loader"></a>boot loader</h1><p>大多数 boot loader 都分为 stage1 和 stage2 两大部分。</p>
+<h1 id="GXemul的启动流程"><a href="#GXemul的启动流程" class="headerlink" title="GXemul的启动流程"></a>GXemul的启动流程</h1><p><code>GXemul</code>支持加载ELF格式内核，所以启动流程被<strong>简化</strong>为加载内核到内存，之后跳转到内核的入口</p>
+<h2 id="gxemul运行选项"><a href="#gxemul运行选项" class="headerlink" title="gxemul运行选项:"></a>gxemul运行选项:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-E 仿真机器的类型</span><br><span class="line">-C 仿真cpu的类型</span><br><span class="line">-M 仿真的内存大小</span><br><span class="line">-V 进入调试模式</span><br></pre></td></tr></table></figure>
+<p>举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gxemul -E testmips -C R3000 -M 64 vmlinux   用gxemul运行vmlinux</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gxemul -E testmips -C R3000 -M 64 -V vmlinux</span><br></pre></td></tr></table></figure>
+<p> 以调试模式打开gxemul，对vmlinux进行调试（进入后直接中断，输入continue或step才会继续运行，在此之前可以进行添加断点等操作）</p>
+<p>进入gxemul后使用Ctrl-C可以中断运行。中断后可以进行单步调试，执行如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">breakpoint add addr添加断点</span><br><span class="line">continue 继续执行</span><br><span class="line">step [n] 向后执行n条汇编指令</span><br><span class="line">lookup name|addr 通过名字或地址查找标识符</span><br><span class="line">dump [addr [endaddr]] 查询指定地址的内容</span><br><span class="line">reg [cpuid][,c] 查看寄存器内容，添加”,c”可以查看协处理器</span><br><span class="line">help 显示各个指令的作用与用法</span><br><span class="line">quit 退出</span><br></pre></td></tr></table></figure>
+<ul>
+<li>c（执行至下一断点）</li>
+<li>step（step 100）</li>
+<li>unassemble（输出汇编代码）</li>
+<li>dump xxaddr （导出某一地址后续的内存信息）</li>
+<li>reg （导出寄存器的值）</li>
+<li>reg, 0（导出协处理器cp0中的寄存器的值）</li>
+<li>tlbdump（导出TLB中的信息）</li>
+<li>trace（了解程序的运行轨迹）</li>
+</ul>
+<h1 id="Makefile内核代码的地图"><a href="#Makefile内核代码的地图" class="headerlink" title="Makefile内核代码的地图"></a>Makefile内核代码的地图</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Main makefile</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Copyright (C) 2007 Beihang University</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Written by Zhu Like ( zlike@cse.buaa.edu.cn )</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"></span><br><span class="line">drivers_dir	  := drivers</span><br><span class="line">boot_dir	  := boot</span><br><span class="line">init_dir	  := init</span><br><span class="line">lib_dir		  := lib</span><br><span class="line">tools_dir	  := tools</span><br><span class="line">test_dir	  := </span><br><span class="line"><span class="meta">#</span><span class="bash">上面定义了各种文件夹名称</span></span><br><span class="line">vmlinux_elf	  := gxemul/vmlinux</span><br><span class="line"><span class="meta">#</span><span class="bash">这个是我们最终需要生成的elf文件</span></span><br><span class="line">link_script   := $(tools_dir)/scse0_3.lds #链接用的脚本</span><br><span class="line"></span><br><span class="line">modules		  := boot drivers init lib</span><br><span class="line">objects		  := $(boot_dir)/start.o			  \</span><br><span class="line">				 $(init_dir)/main.o			  \</span><br><span class="line">				 $(init_dir)/init.o			  \</span><br><span class="line">			   	 $(drivers_dir)/gxconsole/console.o \</span><br><span class="line">				 $(lib_dir)/*.o				  \</span><br><span class="line"><span class="meta">#</span><span class="bash">定义了需要生成的各种文件</span></span><br><span class="line"></span><br><span class="line">.PHONY: all $(modules) clean</span><br><span class="line"></span><br><span class="line">all: $(modules) vmlinux #我们的“最终目标”</span><br><span class="line"></span><br><span class="line">vmlinux: $(modules)</span><br><span class="line"><span class="meta">	$</span><span class="bash">(LD) -o $(vmlinux_elf) -N -T $(link_script) $(objects)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#注意,这里调用了一个叫做$(LD)的程序</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash">(modules): </span></span><br><span class="line"><span class="meta">	$</span><span class="bash">(MAKE) --directory=<span class="variable">$@</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">进入各个子文件夹进行make</span></span><br><span class="line"></span><br><span class="line">clean: </span><br><span class="line">	for d in $(modules);	\</span><br><span class="line">		do					\</span><br><span class="line"><span class="meta">			$</span><span class="bash">(MAKE) --directory=$<span class="variable">$d</span> clean; \</span></span><br><span class="line">		done; \</span><br><span class="line">	rm -rf *.o *~ $(vmlinux_elf)</span><br><span class="line"></span><br><span class="line">include include.mk</span><br></pre></td></tr></table></figure>
+<p>斜杠代表这一行没有结束， 下一行的内容和这一行是连在一起的。这种写法一般用于提高文件的可读性。可以把本该写在同一行的东西分布在多行中，使得文件更容易被人类阅读。</p>
+<p> LD 变量：这里的 CROSS_COMPILE（交叉编译） 变量是在定义编译和链接等指令的前缀，或者说是交叉编译器的具体位置。<code>/OSLAB/compiler/usr/bin/mips_4KC-ld</code></p>
+<h1 id="ELF—深入研究编译与链接"><a href="#ELF—深入研究编译与链接" class="headerlink" title="ELF—深入研究编译与链接"></a>ELF—深入研究编译与链接</h1><ul>
+<li>-E:C语言的预处理器将头文件的内容添加到了源文件中</li>
+<li>-c:<strong>只编译而不链接</strong></li>
+<li>-o:允许链接，进行正常编译</li>
+</ul>
+<p>推断：printf的实现是在<strong>链接(Link)</strong>这一步骤中被插入到最终的可执行文件中的</p>
+<p>printf的实现其实早就被编译成了二进制形式，但他并未链接到程序中，它的状态与我们利用-c选项产生的hello.o相仿，都还处于<strong>未链接的状态</strong></p>
+<p>链接器(Linker)会将所有的目标文件链接在一起，将之前未填写的地址等信息填上，形成最终的可执行文件，这就是链接的过程。</p>
+<h2 id="Thinking-1-1"><a href="#Thinking-1-1" class="headerlink" title="Thinking 1.1"></a>Thinking 1.1</h2><p><strong>请查阅并给出前述objdump 中使用的参数的含义。使用其它体系结构的编译器（如课程平台的MIPS交叉编译器）重复上述各步编译过程，观察并在实验报告中提交相应结果。</strong></p>
+<p>1.运行<code>objdump --help</code>可知：</p>
+<p><code>-D</code>：显示所有部分的汇编程序内容</p>
+<p><code>-S</code>：将源代码与反汇编混合</p>
+<p>2.改用Mips交叉编译器：</p>
+<ul>
+<li>修改CROSS_COMPILE参数（发现已符合要求）</li>
+<li>创建c程序</li>
+<li>使用该编译器替换<code>gcc</code> （编译用$(CC) 、链接用$(LD))</li>
+</ul>
+<p>首先只要求编译器预处理</p>
+<p><code>prac.c</code>文件中内容：（由于无法连接stdio.h，故未写出，此处<strong>使用全局变量进行测试</strong>）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> order;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    num = <span class="number">1</span>;</span><br><span class="line">    order = <span class="number">2</span>;</span><br><span class="line">    num = num + order;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>预处理：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/OSLAB/compiler/usr/bin/mips_4KC-gcc -E prac.c</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 1 &quot;prac.c&quot;</span><br><span class="line"># 1 &quot;&lt;built-in&gt;&quot;</span><br><span class="line"># 1 &quot;&lt;command line&gt;&quot;</span><br><span class="line"># 1 &quot;prac.c&quot;</span><br><span class="line">int order;</span><br><span class="line">int main()&#123;</span><br><span class="line"> int num;</span><br><span class="line"> num &#x3D; 1;</span><br><span class="line"> order &#x3D; 2;</span><br><span class="line"> num &#x3D; num + order;</span><br><span class="line"> return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>只编译不链接</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/OSLAB/compiler/usr/bin/mips_4KC-gcc -c prac.c</span><br></pre></td></tr></table></figure>
+<p>反汇编（main函数部分）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/OSLAB/compiler/usr/bin/mips-linux-objdump -DS prac.o &gt; out.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">Disassembly of section .text:</span><br><span class="line"></span><br><span class="line">00000000 &lt;main&gt;:</span><br><span class="line">   0:   3c1c0000    lui gp,0x0</span><br><span class="line">   4:   279c0000    addiu   gp,gp,0</span><br><span class="line">   8:   0399e021    addu    gp,gp,t9</span><br><span class="line">   c:   27bdffe8    addiu   sp,sp,-24</span><br><span class="line">  10:   afbe0010    sw  s8,16(sp)</span><br><span class="line">  14:   03a0f021    move    s8,sp</span><br><span class="line">  18:   24020001    li  v0,1</span><br><span class="line">  1c:   afc20008    sw  v0,8(s8)</span><br><span class="line">  20:   8f830000    lw  v1,0(gp)&#x2F;&#x2F;观察到此处为0</span><br><span class="line">  24:   24020002    li  v0,2</span><br><span class="line">  28:   ac620000    sw  v0,0(v1)</span><br><span class="line">  2c:   8f820000    lw  v0,0(gp)</span><br><span class="line">  30:   8c430000    lw  v1,0(v0)</span><br><span class="line">  34:   8fc20008    lw  v0,8(s8)</span><br><span class="line">  38:   00431021    addu    v0,v0,v1</span><br><span class="line">  3c:   afc20008    sw  v0,8(s8)</span><br><span class="line">  40:   00001021    move    v0,zero</span><br><span class="line">  44:   03c0e821    move    sp,s8</span><br><span class="line">  48:   8fbe0010    lw  s8,16(sp)</span><br><span class="line">  4c:   27bd0018    addiu   sp,sp,24</span><br><span class="line">  50:   03e00008    jr  ra</span><br><span class="line">  54:   00000000    nop</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<ul>
+<li>正常编译链接：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;OSLAB&#x2F;compiler&#x2F;usr&#x2F;bin&#x2F;mips_4KC-ld -o out prac.o</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;OSLAB&#x2F;compiler&#x2F;usr&#x2F;bin&#x2F;mips-linux-objdump -DS out &gt; out.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">Disassembly of section .text:</span><br><span class="line"></span><br><span class="line">004000b0 &lt;main&gt;:</span><br><span class="line">  4000b0:   3c1c0fc0    lui gp,0xfc0</span><br><span class="line">  4000b4:   279c7f40    addiu   gp,gp,32576</span><br><span class="line">  4000b8:   0399e021    addu    gp,gp,t9</span><br><span class="line">  4000bc:   27bdffe8    addiu   sp,sp,-24</span><br><span class="line">  4000c0:   afbe0010    sw  s8,16(sp)</span><br><span class="line">  4000c4:   03a0f021    move    s8,sp</span><br><span class="line">  4000c8:   24020001    li  v0,1</span><br><span class="line">  4000cc:   afc20008    sw  v0,8(s8)</span><br><span class="line">  4000d0:   8f83802c    lw  v1,-32724(gp)&#x2F;&#x2F;观察到gp前偏移量不为零</span><br><span class="line">  4000d4:   24020002    li  v0,2</span><br><span class="line">  4000d8:   ac620000    sw  v0,0(v1)</span><br><span class="line">  4000dc:   8f82802c    lw  v0,-32724(gp)</span><br><span class="line">  4000e0:   8c430000    lw  v1,0(v0)</span><br><span class="line">  4000e4:   8fc20008    lw  v0,8(s8)</span><br><span class="line">  4000e8:   00431021    addu    v0,v0,v1</span><br><span class="line">  4000ec:   afc20008    sw  v0,8(s8)</span><br><span class="line">  4000f0:   00001021    move    v0,zero</span><br><span class="line">  4000f4:   03c0e821    move    sp,s8</span><br><span class="line">  4000f8:   8fbe0010    lw  s8,16(sp)</span><br><span class="line">  4000fc:   27bd0018    addiu   sp,sp,24</span><br><span class="line">  400100:   03e00008    jr  ra</span><br><span class="line">  400104:   00000000    nop</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<h2 id="ELF文件功能及格式"><a href="#ELF文件功能及格式" class="headerlink" title="ELF文件功能及格式"></a>ELF文件功能及格式</h2><p>ELF文件是一种对可执行文件、目标文件和库使用的文件格式</p>
+<p>三种文件类型：可重定位(relocatable)文件是1、可执行(executable)文件是2和共享对象(shared object)文件是3</p>
+<p>总体来说分为5个部分：</p>
+<p><code>ELF HEADER</code>、<code>Program Header Table</code>、<code>Section Header Table</code>、<code>Segments</code>、<code>Sections</code></p>
+<p>结构体大小：寻找结构体中最大的内存占用单位，以此为基准乘以元素个数即为结构体大小，有时会存在合并优化。</p>
+<p>对于控制数据，ELF 定义了自己的数据结 构，所以并不依赖于所在机器的字长；其它数据使用目标处理器的数据格式，字长是在构建期间由编译器/连接器来指定的，与创建时所在的主机无关。</p>
+<ul>
+<li>ELF文件头：<ul>
+<li>e_ident: <ul>
+<li>e_ident[EI_MAG0] ~ e_ident[EI_MAG3] 存放魔数0x7f、E、L、F</li>
+<li>EI_CLASS: 0-&gt;非法、1-&gt;32位、2-&gt;64位</li>
+<li>EIDATA: 数据编码格式</li>
+<li>EI_PAD - EI_NIDENT-1未使用</li>
+</ul>
+</li>
+<li>e_type:<ul>
+<li>0:未知</li>
+<li>1:.o</li>
+<li>2:可执行</li>
+<li>3:动态链接库文件</li>
+<li>4:Core文件</li>
+</ul>
+</li>
+<li>e_machine</li>
+<li>e_version</li>
+<li>…</li>
+</ul>
+</li>
+<li>节头表：数组：目标文件中的每一个节一定对应有一个节头(section header)，节头中有对节 的描述信息；但有的节头可以没有对应的节，而只是一个空的头。<ul>
+<li>sh_name:一个可以索引到字符串的指针</li>
+<li>sh_addr:在运行时本节映射的位置</li>
+<li>sh_offset：在文件中本节存储的位置</li>
+<li>sh_size: 指明节的大小</li>
+</ul>
+</li>
+<li>动态链接（程序头）：程序头表：数组，包含程序头，描述了一个段的信息。<ul>
+<li>p_type</li>
+<li>p_offset:该段在文件中的位置，相对于文件开头的偏移量</li>
+<li>p_vaddr:进程开始时，该段开始位置在虚拟内存的地址</li>
+<li>p_paddr:物理地址</li>
+<li>p_filesz: 该段内容在文件中的大小</li>
+<li>p_memsz：该段内容在内容镜像中的大小</li>
+<li>p_flags</li>
+<li>p_align</li>
+</ul>
+</li>
+</ul>
+<p>为什么C语言中全局变量会有默认值0。这是因为操作系统在加载时将所有未初始化的全局变量所占的内存统一填了0。</p>
+<p>对于可重定位(relocatable)文件，查看其e_type值为1。</p>
+<h1 id="Mips内存布局——寻找内核的正确位置"><a href="#Mips内存布局——寻找内核的正确位置" class="headerlink" title="Mips内存布局——寻找内核的正确位置"></a>Mips内存布局——寻找内核的正确位置</h1><p>在include/mmu.h里有我们的小操作系统内核完整的内存布局图（见下面的代码）， 在之后的实验中，善用它可以带来意料之外的惊喜。</p>
+<p>内核在<code>kseg0</code>中</p>
+<h1 id="Linker-Script——控制加载地址"><a href="#Linker-Script——控制加载地址" class="headerlink" title="Linker Script——控制加载地址"></a>Linker Script——控制加载地址</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">. &#x3D; 0x8001 0000;</span><br><span class="line">.text : &#123; *(.text) &#125;</span><br><span class="line">.data : &#123; *(.data) &#125;</span><br><span class="line">.bss : &#123; *(.bss) &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Mips汇编与C语言"><a href="#Mips汇编与C语言" class="headerlink" title="Mips汇编与C语言"></a>Mips汇编与C语言</h1><p>在函数调用过程中，编译器真的为我们维护了一个栈。这下同学们应该也不难理解，为什么复杂函数在递归层数过多时会导 致程序崩溃，也就是我们常说的“栈溢出”。</p>
+<h1 id="通用寄存器使用约定"><a href="#通用寄存器使用约定" class="headerlink" title="通用寄存器使用约定"></a>通用寄存器使用约定</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">寄存器编号</th>
+<th style="text-align:center">助记符</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">zero</td>
+<td style="text-align:left">值总是为0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">at</td>
+<td style="text-align:left">（汇编暂存寄存器）一般由汇编器作为临时寄存器使用。</td>
+</tr>
+<tr>
+<td style="text-align:center">2-3</td>
+<td style="text-align:center">v0-v1</td>
+<td style="text-align:left">用于存放表达式的值或函数的整形、指针类型返回值</td>
+</tr>
+<tr>
+<td style="text-align:center">4-7</td>
+<td style="text-align:center">a0-a3</td>
+<td style="text-align:left">用于函数传参。其值在函数调用的过程中不会被保存。若函数参数较多，多出来的参数会采用栈进行传递</td>
+</tr>
+<tr>
+<td style="text-align:center">8-15</td>
+<td style="text-align:center">t0-t7</td>
+<td style="text-align:left">用于存放表达式的值的临时寄存器;其值在函数调用的过程中不会被保存。</td>
+</tr>
+<tr>
+<td style="text-align:center">16-23</td>
+<td style="text-align:center">s0-s7</td>
+<td style="text-align:left">保存寄存器;这些寄存器中的值在经过函数调用后不会被改变。</td>
+</tr>
+<tr>
+<td style="text-align:center">24-25</td>
+<td style="text-align:center">t8-t9</td>
+<td style="text-align:left">用于存放表达式的值的临时寄存器;其值在函数调用的过程中不会被保存。当调用位置无关函数(position independent function)时， 25号寄存器必须存放被调用函数的地址。</td>
+</tr>
+<tr>
+<td style="text-align:center">26-27</td>
+<td style="text-align:center">k0-k1</td>
+<td style="text-align:left">仅被操作系统使用。</td>
+</tr>
+<tr>
+<td style="text-align:center">28</td>
+<td style="text-align:center">gp</td>
+<td style="text-align:left">全局指针和内容指针。</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td style="text-align:center">sp</td>
+<td style="text-align:left">栈指针。</td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
+<td style="text-align:center">fp或s8</td>
+<td style="text-align:left">保存寄存器（同s0-s7）。也可用作帧指针。</td>
+</tr>
+<tr>
+<td style="text-align:center">31</td>
+<td style="text-align:center">ra</td>
+<td style="text-align:left">函数返回地址。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>其中，只有16-23号寄存器和28-30号寄存器的值在函数调用的前后是不变的。</p>
+<p>对于28号寄存器有一个特例：当调用位置无关代码(position independent code)时，28号寄存器的值是不被保存的。</p>
+<p>除了这些通用寄存器之外，还有一个特殊的寄存器：PC寄存器。这个寄存器中储存了当前要执行的指令的地址。 当你在Gxemul仿真器上调试内核时，可以留意一下这个寄存器。通过PC的值，我们就能够知道当前内核在执行的代码是哪一条， 或者触发中断的代码是哪一条等等。</p>
+<h1 id="实战printf"><a href="#实战printf" class="headerlink" title="实战printf"></a>实战printf</h1><ul>
+<li>console.c</li>
+</ul>
+<p>实现向控制台输出字符的函数</p>
+<ul>
+<li>printf.c</li>
+</ul>
+<p>实现printf.c函数，将输出字符函数、接受输出参数传递给Ip_print函数</p>
+<ul>
+<li>Ip_print函数</li>
+</ul>
+<p>实现了lp_Print 函数，是printf函数的真正内核</p>
+<p>关于printf.c函数：</p>
+<p>可变长参数：</p>
+<ol>
+<li>格式：函数参数列表末尾有省略号，代表该函数有变长参数表。</li>
+<li>要求：需要定义变长参数表的起始位置，且函数需要有至少一个固定参数，变长参数在参数表结尾</li>
+<li>相关定义：<code>va_list</code>、<code>va_start</code>、<code>va_arg</code>、<code>va_end</code></li>
+<li>具体使用流程</li>
+</ol>
+<ul>
+<li>使用前需声明一个类型为va_list的变量ap</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">va_list ap;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后使用va_start宏进行一次初始化</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">va_start(ap, lastarg);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>初始化后，可以使用va_arg宏获取下一个形式参数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int num;</span><br><span class="line">num &#x3D; va_arg(ap, int);&#x2F;&#x2F;第二个参数为这次获取的参数的数据类型</span><br></pre></td></tr></table></figure>
+<ul>
+<li>所有参数处理完毕后使用va_end宏结束可变长参数的使用</li>
+</ul>
+<h2 id="Exercise-1-5"><a href="#Exercise-1-5" class="headerlink" title="Exercise 1.5"></a>Exercise 1.5</h2><p><strong>补全lib/print.c中lp_Print()函数中缺失的部分来实现字符输出。</strong></p>
+<p>实现Ip_Print函数</p>
+<p>1.使用宏定义简化myoutput这个函数指针的使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OUTPUT(arg, s, l)</span><br></pre></td></tr></table></figure>
+<p>2.定义需要使用的变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int longFlag;&#x2F;&#x2F;标记是否为 long 型</span><br><span class="line"></span><br><span class="line">int negFlag;&#x2F;&#x2F;标记是否为负数</span><br><span class="line"></span><br><span class="line">int width;&#x2F;&#x2F;标记输出宽度</span><br><span class="line"></span><br><span class="line">int prec;&#x2F;&#x2F;标记小数精度</span><br><span class="line"></span><br><span class="line">int ladjust;&#x2F;&#x2F;标记是否左对齐</span><br><span class="line"></span><br><span class="line">char padc;&#x2F;&#x2F;填充多余位置所用的字符</span><br></pre></td></tr></table></figure>
+<p>3.找到格式符%，分析输出格式</p>
+<p>4.根据输出格式对结果进行输出</p>
+<p>分析：</p>
+<p>myoutput函数输出<strong>字符串</strong>，OUTPUT宏为myoutput的简化调用</p>
+<ul>
+<li>若非法则输出FatalMsg</li>
+<li>否则输出s数组存储的字符串</li>
+</ul>
+<p>各变量定义：</p>
+<p>buf[LP_MAX__BUF] -&gt; 承载中间过程的字符串数组</p>
+<p>char c -&gt; 指向当前字符</p>
+<p>char *s -&gt; 实参中的字符串数组</p>
+<p>long int num -&gt; 用于接受数字</p>
+<p>int longFlag -&gt; 标记长整数</p>
+<h3 id="由此进入printf的实现细节，学习整理如下："><a href="#由此进入printf的实现细节，学习整理如下：" class="headerlink" title="由此进入printf的实现细节，学习整理如下："></a>由此进入printf的实现细节，学习整理如下：</h3><h3 id="printf有四种格式："><a href="#printf有四种格式：" class="headerlink" title="printf有四种格式："></a>printf有四种格式：</h3><ol>
+<li>printf(“字符串\n”);</li>
+<li>printf(“输出控制符”，输出参数);</li>
+<li>printf(“输出控制符1 输出控制符2…”, 输出参数1, 输出参数2, …);</li>
+<li>printf(“输出控制符 非输出控制符”，输出参数);</li>
+</ol>
+<p>理解：输出控制符以<code>%</code>为标志，其他非输出控制符原样输出</p>
+<h4 id="常见输出控制符："><a href="#常见输出控制符：" class="headerlink" title="常见输出控制符："></a>常见输出控制符：</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>控制符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%d</td>
+<td>按十进制整型数据的实际长度输出。</td>
+</tr>
+<tr>
+<td>%ld</td>
+<td>输出长整型数据。</td>
+</tr>
+<tr>
+<td>%md</td>
+<td>m 为<strong>指定的输出字段的宽度</strong>。如果数据的位数小于 m，则<strong>左端补以空格</strong>，若大于 m，则按实际位数输出。</td>
+</tr>
+<tr>
+<td>%u</td>
+<td>输出无符号整型（unsigned）。输出无符号整型时也可以用 %d，这时是将无符号转换成有符号数，然后输出。但编程的时候最好不要这么写，因为这样要进行一次转换，使 CPU 多做一次无用功。</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>用来输出一个字符。</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>用来输出实数，包括单精度和双精度，以小数形式输出。不指定字段宽度，由系统自动指定，整数部分全部输出，<strong>小数部分输出 6 位，超过 6 位的四舍五入。</strong></td>
+</tr>
+<tr>
+<td>%.mf</td>
+<td>输出实数时小数点后保留 m 位，注意 <strong>m 前面有个点</strong>。</td>
+</tr>
+<tr>
+<td>%o</td>
+<td>以<strong>八进制整数形式</strong>输出，这个就用得很少了，了解一下就行了。</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>用来输出字符串。用 %s 输出字符串同前面直接输出字符串是一样的。但是此时要先定义字符数组或字符指针存储或指向字符串，这个稍后再讲。</td>
+</tr>
+<tr>
+<td>%x（或 %X 或 %#x 或 %#X）</td>
+<td>以十<strong>六进制形式输出整数</strong>，这个很重要。</td>
+</tr>
+<tr>
+<td>%-</td>
+<td>左对齐</td>
+</tr>
+<tr>
+<td>%+</td>
+<td>右对齐</td>
+</tr>
+<tr>
+<td>%</td>
+<td>百分号+空格：若符号为正，则显示空格，负则显示”-“</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>理解：如果是小写的<code>x</code>，输出的字母就是小写的；如果是大写的<code>X</code>，输出的字母就是大写的；如果加一个<code>#</code>，就以标准的十六进制形式输出。</p>
+<h4 id="完整："><a href="#完整：" class="headerlink" title="完整："></a>完整：</h4><p>% - .n l或h 格式字符</p>
+<p>①%：表示格式说明的起始符号，不可缺少。<br>②-：有-表示左对齐输出，如<strong>省略表示右对齐输出</strong>。<br>③0：有0表示指定空位填0,如<strong>省略表示指定空位不填。</strong><br>④m.n：m指域宽，即对应的输出项在输出设备上所占的字符数。N指精度。用于说明输出的实型数的小数位数。未指定n时，隐含的精度为n=6位。<br>⑤l或h:l对整型指long型，对实型指double型。h用于将整型的格式字符修正为short型。</p>
+<p>example：<code>%-07.2lf</code></p>
+<h4 id="附加："><a href="#附加：" class="headerlink" title="附加："></a>附加：</h4><ul>
+<li><p>输出<code>%</code>需加两个<code>%</code></p>
+</li>
+<li><p>对于m.n的格式还可以用如下方法表示（例）</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char ch[20];</span><br><span class="line">printf(&quot;%*.*s\n&quot;,m,n,ch);</span><br></pre></td></tr></table></figure>
+<p>前边的<strong>*定义的是总的宽度，后边的定义的是输出的个数</strong>。分别<strong>对应外面的参数m和n</strong> 。我想这种方法的好处是可以在语句之外对参数m和n赋值，从而控制输出格式</p>
+<ul>
+<li>今天()又看到一种输出格式 %n 可以将所输出字符串的长度值赋绐一个变量, 见下例:</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> slen;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"hello world%n"</span>, &amp;slen);</span><br></pre></td></tr></table></figure>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>1.printf一般形式：</p>
+<p> <strong>printf(“格式控制字符串”,输出项列表);</strong></p>
+<p>2.格式控制：</p>
+<p>（1）普通字符。普通字符在输出时，按原样输出，主要用于输出提示信息。</p>
+<p>（2）转义字符。转义字符指明特定的操作，如”\n”表示换行，”\t”表示水平制表等。</p>
+<p>（3）格式说明部分由“%”和“格式字符串”组成，他表示按规定的格式输出数据</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%[flags][<span class="built_in">width</span>][.prec][F|N|h|I][type]</span><br></pre></td></tr></table></figure>
+<p>flags-&gt;<code>-</code>/<code>+</code>/<code> </code></p>
+<h3 id="继续："><a href="#继续：" class="headerlink" title="继续："></a>继续：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">longFlag &#x3D; (%后面有l) ? 1 : 0</span><br><span class="line">negFlag &#x3D; () ? </span><br><span class="line">width &#x3D; (%后面的非零十进制数)</span><br><span class="line">prec &#x3D; (%后面的小数点.)</span><br><span class="line">ladjust &#x3D; 左对齐 ? 1 : 0</span><br><span class="line">padc &#x3D; 填充符(可能为0或缺省-&gt;空格)</span><br><span class="line">length &#x3D; 占位长度</span><br></pre></td></tr></table></figure>
+<p>处理：</p>
+<p>外部循环判断是否到达结尾</p>
+<p>判断*fmt:</p>
+<h4 id="printNum函数："><a href="#printNum函数：" class="headerlink" title="printNum函数："></a>printNum函数：</h4><p>（buf数组、u（代表<strong>实际参数</strong>）、base(代表进制)、negFlag（代表是不是负数）、length(代表要占据输出的长度)、ladjust(代表左对齐)、padc（代表填充符）、upcase（代表是否大写出现的字母））</p>
+<p>倒序存储数字（一个do-while循环）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">123456-&gt;654321</span><br></pre></td></tr></table></figure>
+<p>若为负数加负号</p>
+<p>判断占位长度（若实际长度大，按实际长度输出）</p>
+<p>左对齐忽略填充符</p>
+<p>右对齐、负数、填充为0</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-123456-&gt;654321000-</span><br></pre></td></tr></table></figure>
+<p>其他：直接填充</p>
+<p>反转字符串</p>
+<ul>
+<li>左对齐仅反转有效部分</li>
+<li>右对齐全部反转</li>
+</ul>
+<p>返回字符串长度</p>
+<p>分析：</p>
+<p>fmt指针应指向整个格式字符串</p>
+<p>s指针用来指向<strong>实参</strong></p>
+<p>fmt指向谁？应为引号中的字符串，以’\0’结尾</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int longFlag;&#x2F;&#x2F;标记是否为 long 型</span><br><span class="line"></span><br><span class="line">int negFlag;&#x2F;&#x2F;标记是否为负数</span><br><span class="line"></span><br><span class="line">int width;&#x2F;&#x2F;标记输出宽度</span><br><span class="line"></span><br><span class="line">int prec;&#x2F;&#x2F;标记小数精度</span><br><span class="line"></span><br><span class="line">int ladjust;&#x2F;&#x2F;标记是否左对齐</span><br><span class="line"></span><br><span class="line">char padc;&#x2F;&#x2F;填充多余位置所用的字符</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf(&quot;my name&quot;, a, b);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span>     IsDigit(x)  ( ((x) &gt;= <span class="meta-string">'0'</span>) &amp;&amp; ((x) &lt;= <span class="meta-string">'9'</span>) )</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span>     Ctod(x)     ( (x) - <span class="meta-string">'0'</span>)</span></span><br><span class="line"><span class="keyword">char</span> s[<span class="number">200</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ladjust;</span><br><span class="line">	<span class="keyword">char</span> padc;</span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">width</span>;</span><br><span class="line">	<span class="keyword">int</span> longFlag;</span><br><span class="line">	<span class="keyword">int</span> prec;</span><br><span class="line">	<span class="keyword">char</span> *fmt;</span><br><span class="line">	gets(s);</span><br><span class="line">	fmt = s;</span><br><span class="line">	<span class="keyword">if</span> (*fmt == <span class="string">'%'</span>) &#123;</span><br><span class="line">        fmt++;<span class="comment">//next</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (count &lt; <span class="number">4</span>) &#123;</span><br><span class="line">        	<span class="keyword">switch</span>(count) &#123;</span><br><span class="line">        		<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">        			<span class="keyword">if</span> (*fmt == <span class="string">'-'</span>) &#123;</span><br><span class="line">        				ladjust = <span class="number">1</span>;</span><br><span class="line">        				fmt++;</span><br><span class="line">					&#125; <span class="keyword">else</span> <span class="keyword">if</span> (*fmt == <span class="string">'0'</span>) &#123;</span><br><span class="line">						ladjust = <span class="number">0</span>;</span><br><span class="line">						padc = <span class="string">'0'</span>;</span><br><span class="line">						fmt++;</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						ladjust = <span class="number">0</span>;</span><br><span class="line">						padc = <span class="string">' '</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					count++;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">					<span class="built_in">width</span> = <span class="number">0</span>;</span><br><span class="line">					<span class="keyword">while</span> (IsDigit(*fmt)) &#123;</span><br><span class="line">						<span class="built_in">width</span> *= <span class="number">10</span>;</span><br><span class="line">						<span class="built_in">width</span> += Ctod(*fmt);</span><br><span class="line">						fmt++;</span><br><span class="line">					&#125;</span><br><span class="line">					count++;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">					<span class="keyword">if</span> (*fmt == <span class="string">'.'</span>) &#123;</span><br><span class="line">						fmt++;<span class="comment">//there must be a num after doc </span></span><br><span class="line">						prec = <span class="number">0</span>;</span><br><span class="line">						<span class="keyword">while</span> (IsDigit(*fmt)) &#123;</span><br><span class="line">							prec *= <span class="number">10</span>;</span><br><span class="line">							prec += Ctod(*fmt);</span><br><span class="line">							fmt++;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">					count++;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">        		<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        			<span class="keyword">if</span> (*fmt == <span class="string">'l'</span>) &#123;</span><br><span class="line">        				longFlag = <span class="number">1</span>;</span><br><span class="line">        				fmt++;</span><br><span class="line">					&#125;</span><br><span class="line">					count++;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="keyword">default</span> :</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;                        </span><br><span class="line">	&#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"char = %c, longFlag = %d, width = %d, prec = %d, ladjust = %d, padc = %c"</span>, *fmt, longFlag, <span class="built_in">width</span>, prec, ladjust, padc);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%-9.7ld</span><br><span class="line">char &#x3D; d, longFlag &#x3D; 1, width &#x3D; 9, prec &#x3D; 7, ladjust &#x3D; 1, padc &#x3D;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%0034879.324ld</span><br><span class="line">char &#x3D; d, longFlag &#x3D; 1, width &#x3D; 34879, prec &#x3D; 324, ladjust &#x3D; 0, padc &#x3D; 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%-0231.21lf</span><br><span class="line">char &#x3D; f, longFlag &#x3D; 1, width &#x3D; 231, prec &#x3D; 21, ladjust &#x3D; 1, padc &#x3D;</span><br></pre></td></tr></table></figure>
+<h3 id="修复bug"><a href="#修复bug" class="headerlink" title="修复bug"></a>修复bug</h3><p>1.若%d读入为负数则需使num取反（否则对base取余会有问题）</p>
+<p>2.longFlag初始化</p>
+<p>3.prec初始化</p>
+<p>4.未读到%须直<strong>接输出</strong></p>
+<p>样例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf(cjj)</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>lab1通过一个printf来加深我们的理解，要想实现这个printf并不难，但是想完全搞清楚lab1还是需要费一番功夫的。</p>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2022/07/03/lab0总结/" data-toggle="tooltip" data-placement="top" title="BUAA_OS lab0总结">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2022/07/01/BUAA-OS-课程笔记/" data-toggle="tooltip" data-placement="top" title="BUAA_OS_课程笔记">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                <!-- tip start -->
+                
+
+                
+                <div class="comment_notes">
+                    <p>
+                        This is copyright.
+                    </p>
+                </div>
+                
+                <!-- tip end -->
+
+                <!-- Music start-->
+                
+                <!-- Music end -->
+
+                <!-- Sharing -->
+                
+                <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                <!--  css & js -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!-- Sharing -->
+
+                <!-- gitment start -->
+                
+                <hr>
+                <div id="blog_comments"></div>
+
+<!--
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+<!--
+<link rel="stylesheet" href="/css/gitment.css">
+<script type="text/javascript" src="/js/gitment.js"></script>
+-->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+
+<!--
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+-->
+
+<script>
+const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'gitment-container gitment-root-container'
+    
+     // your custom component
+    container.appendChild(instance.renderSomething(state, instance))
+    
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    //container.appendChild(instance.renderFooter(state, instance))
+    return container
+  },
+  renderSomething(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'hello_visitor'
+    if (state.user.login) {
+      container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+    }
+    return container
+  }
+}
+
+
+const gitment = new Gitment({
+    id: 'Sun Jul 03 2022 09:20:38 GMT+0800', // optional
+    owner: "",
+    repo: "",
+    oauth: {
+      client_id: "",
+      client_secret: "",
+    },
+    theme: myTheme,
+    // ...
+    // For more available options, check out the documentation below
+  })
+  
+  gitment.render('blog_comments')
+  // or
+  // gitment.render(document.getElementById('comments'))
+  // or
+  // document.body.appendChild(gitment.render())
+</script>
+                
+                <!-- gitment end -->
+
+                <!-- 来必力City版安装代码 -->
+                
+                <!-- City版安装代码已完成 -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#实验目的"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">实验目的</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#操作系统内核"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">操作系统内核</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#boot-loader"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">boot loader</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#GXemul的启动流程"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">GXemul的启动流程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#gxemul运行选项"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">gxemul运行选项:</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Makefile内核代码的地图"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Makefile内核代码的地图</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#ELF—深入研究编译与链接"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">ELF—深入研究编译与链接</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Thinking-1-1"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">Thinking 1.1</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ELF文件功能及格式"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">ELF文件功能及格式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Mips内存布局——寻找内核的正确位置"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Mips内存布局——寻找内核的正确位置</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Linker-Script——控制加载地址"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">Linker Script——控制加载地址</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Mips汇编与C语言"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">Mips汇编与C语言</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#通用寄存器使用约定"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">通用寄存器使用约定</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#实战printf"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">实战printf</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Exercise-1-5"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">Exercise 1.5</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#由此进入printf的实现细节，学习整理如下："><span class="toc-nav-number">11.1.1.</span> <span class="toc-nav-text">由此进入printf的实现细节，学习整理如下：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#printf有四种格式："><span class="toc-nav-number">11.1.2.</span> <span class="toc-nav-text">printf有四种格式：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#常见输出控制符："><span class="toc-nav-number">11.1.2.1.</span> <span class="toc-nav-text">常见输出控制符：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#完整："><span class="toc-nav-number">11.1.2.2.</span> <span class="toc-nav-text">完整：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#附加："><span class="toc-nav-number">11.1.2.3.</span> <span class="toc-nav-text">附加：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#总结："><span class="toc-nav-number">11.1.2.4.</span> <span class="toc-nav-text">总结：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#继续："><span class="toc-nav-number">11.1.3.</span> <span class="toc-nav-text">继续：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#printNum函数："><span class="toc-nav-number">11.1.3.1.</span> <span class="toc-nav-text">printNum函数：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修复bug"><span class="toc-nav-number">11.1.4.</span> <span class="toc-nav-text">修复bug</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#总结"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">总结</span></a></li></ol>
+            
+          
+          </div>
+        </aside>
+      
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#BUAA-OS实验" title="BUAA-OS实验">BUAA-OS实验</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://thysrael.github.io" target="_blank">thysrael</a></li>
+                    
+                        <li><a href="http://zhang-kg.github.io" target="_blank">zhang-kg</a></li>
+                    
+                        <li><a href="http://guo-hy.github.io" target="_blank">guo-hy</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+
+
+<style  type="text/css">
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/cjj826">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; cjj 2022 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/dusign/hexo-theme-snail" target="_blank" rel="noopener">
+                        <i>hexo-theme-snail</i>
+                    </a> | 
+                    <iframe name="star" style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=hexo-theme-snail&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+    <script type="text/javascript">      
+        var search_path = "search.xml";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+        <!-- background effects line -->
+        
+
+        
+            <script type="text/javascript" src="/js/mouse-click.js" content='[&quot;😅&quot;]' color='[&quot;rgb(121,93,179)&quot; ,&quot;rgb(76,180,231)&quot; ,&quot;rgb(184,90,154)&quot;]'></script>
+        
+
+        <!-- background effects end -->
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+
+</html>
