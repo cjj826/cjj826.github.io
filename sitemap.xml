@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2022/05/24/lab0%25E6%2580%25BB%25E7%25BB%2593/</loc>
+    
+    <lastmod>2022-07-03T01:11:27.874Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/11/01/Hexo-Theme-Snail/</loc>
+    
+    <lastmod>2022-07-01T01:25:29.155Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2022/07/01/BUAA-OS-%25E8%25AF%25BE%25E7%25A8%258B%25E7%25AC%2594%25E8%25AE%25B0/</loc>
     
     <lastmod>2022-07-01T01:25:04.514Z</lastmod>
@@ -61,13 +75,6 @@
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2022-05-23T07:20:14.402Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/11/01/Hexo-Theme-Snail/</loc>
-    
-    <lastmod>2022-05-23T07:20:14.378Z</lastmod>
     
   </url>
   
