@@ -16,11 +16,11 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
     <title>
         
-          实战prompt - 重结晶
+          prompt学习 - 重结晶
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/2022/07/12/实战prompt/">
+    <link rel="canonical" href="http://yoursite.com/2022/07/08/prompt学习/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -109,18 +109,18 @@
                         <div class="tags">
                             
                         </div>
-                        <h1>实战prompt</h1>
+                        <h1>prompt学习</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by cjj on
-                            2022-07-12
+                            2022-07-08
                         </span>
 
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">93</span> and
-                                Reading Time <span class="post-count">1</span> Minutes
+                                Words <span class="post-count">692</span> and
+                                Reading Time <span class="post-count">3</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -268,19 +268,88 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p><a href="https://zhuanlan.zhihu.com/p/440169921" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/440169921</a></p>
-<p><strong>1. 答案提示型prompt</strong>， 根据任务的目标、答案的类型设计prompt，通过prompt引出答案。</p>
-<p><strong>2. 任务提示型prompt</strong>，提醒模型是要做什么任务，因为同样输入一句话，可以做的任务太多了，通过prompt让模型知道这次是要做什么任务。</p>
-<p><a href="https://github.com/thunlp/OpenPrompt" target="_blank" rel="noopener">https://github.com/thunlp/OpenPrompt</a></p>
+                <h1 id="什么是prompt"><a href="#什么是prompt" class="headerlink" title="什么是prompt"></a>什么是prompt</h1><p>博客阅读资料：<a href="https://wmathor.com/index.php/archives/1587/" target="_blank" rel="noopener">https://wmathor.com/index.php/archives/1587/</a></p>
+<p>prompt learning，提示学习，最近一年在NLP领域较火的方向。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>基础：transformer、self-supervision，是一种训练范式：<code>pre-train + prompt</code>，和 <code>pre-train + fine-tune</code>并驾齐驱</p>
+<h2 id="与之紧密联系的"><a href="#与之紧密联系的" class="headerlink" title="与之紧密联系的"></a>与之紧密联系的</h2><p>language model（语言模型）：BERT（完型填空） + GPT（有输入得出下一个词的概率）</p>
+<p>prompt for LM：<strong>prompt提示语</strong></p>
+<p>例子：设计一个影评的情感分类模型，我们搭建一个模型： 影评 + <code>in a word, this movie is ____</code>。其中包含人工设计的模板 in a word …，这就是prompt的起源。</p>
+<p>prompt相较于fine - tune的优势：<strong>1. 计算量小 2.存储空间小 （主要是模型参数少）</strong></p>
+<h2 id="prompt-learning"><a href="#prompt-learning" class="headerlink" title="prompt learning"></a>prompt learning</h2><p>模板不用人工设计，可以由模型自己学习。方法：在输入之前使用一些embedding进行预训练</p>
+<ul>
+<li>本质：让下游任务的数据分布向训练集的数据分布进行迁移</li>
+<li>为什么有效：prompt（提示）可以改变transformer的注意力，<strong>适合全局特征</strong>，但不适合<strong>抽取式问答</strong></li>
+</ul>
+<h2 id="prompt-learning-和-CV"><a href="#prompt-learning-和-CV" class="headerlink" title="prompt learning 和 CV"></a>prompt learning 和 CV</h2><ul>
+<li>NLP的prompt并不成熟，很多问题为解决</li>
+<li>CV的bert也没有大发展</li>
+</ul>
+<p>结论：prompt在CV领域暂时不会有大发展</p>
+<p><img src="/2022-07-08-prompt%E5%AD%A6%E4%B9%A0/image-20220708144846770.png" alt="image-20220708144846770"></p>
+<p>类似于一个QA任务，问题相当于prompt，分为离散型（人能理解的）和连续型</p>
+<p>实践：<a href="https://huggingface.co/hfl/chinese-roberta-wwm-ext?text=%E5%90%8E%E9%9D%A2%E7%9A%84%E4%BE%8B%E5%AD%90%E6%83%85%E6%84%9F%E9%9D%9E%E5%B8%B8%5BMASK%5D%EF%BC%8C%E4%BB%8A%E5%A4%A9%E5%A4%A9%E6%B0%94%E7%9C%9F%E5%A5%BD%EF%BC%81" target="_blank" rel="noopener">https://huggingface.co/hfl/chinese-roberta-wwm-ext?text=%E5%90%8E%E9%9D%A2%E7%9A%84%E4%BE%8B%E5%AD%90%E6%83%85%E6%84%9F%E9%9D%9E%E5%B8%B8%5BMASK%5D%EF%BC%8C%E4%BB%8A%E5%A4%A9%E5%A4%A9%E6%B0%94%E7%9C%9F%E5%A5%BD%EF%BC%81</a></p>
+<h1 id="最新研究趋势"><a href="#最新研究趋势" class="headerlink" title="最新研究趋势"></a>最新研究趋势</h1><p>EMNLP 2021 论文预讲会</p>
+<p><a href="https://www.bilibili.com/video/BV1zf4y1u7og?spm_id_from=333.337.search-card.all.click&amp;vd_source=75b4a2d423c495540711366f06d73d56" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1zf4y1u7og?spm_id_from=333.337.search-card.all.click&amp;vd_source=75b4a2d423c495540711366f06d73d56</a></p>
+<p><img src="/2022-07-08-prompt%E5%AD%A6%E4%B9%A0/image-20220708151314321.png" alt="image-20220708151314321"></p>
+<h2 id="研究维度"><a href="#研究维度" class="headerlink" title="研究维度"></a>研究维度</h2><p><img src="/2022-07-08-prompt%E5%AD%A6%E4%B9%A0/image-20220708151343523.png" alt="image-20220708151343523"></p>
+<h2 id="从不同视角看Prompt论文发表情况"><a href="#从不同视角看Prompt论文发表情况" class="headerlink" title="从不同视角看Prompt论文发表情况"></a>从不同视角看Prompt论文发表情况</h2><h3 id="视角一：Pretrained-Language-Models"><a href="#视角一：Pretrained-Language-Models" class="headerlink" title="视角一：Pretrained Language Models"></a>视角一：Pretrained Language Models</h3><ol>
+<li>GPT comes earlier</li>
+<li>BERT is the most widely-used one <ul>
+<li>分类任务</li>
+<li>knowledge probing</li>
+</ul>
+</li>
+<li>T5 is more popular recently<ul>
+<li>QA tasks</li>
+<li>Generation-based tasks</li>
+<li>support PLMs with richer sizes（大尺度）</li>
+<li>support cross-lingual PLMs（多语言）</li>
+</ul>
+</li>
+</ol>
+<h3 id="视角二：Tuning-Strategies"><a href="#视角二：Tuning-Strategies" class="headerlink" title="视角二：Tuning Strategies"></a>视角二：Tuning Strategies</h3><ol>
+<li><strong>Tuning-free</strong>（不改变参数） comes first and keeps popular</li>
+<li><strong>Prompt-only</strong>（只改变prompt的参数）tuning gradually get more attention</li>
+<li><strong>Tuning-all</strong>（既调预训练语言模型的参数，又调prompt的参数） parameters is less investigated</li>
+</ol>
+<h3 id="视角三：tasks"><a href="#视角三：tasks" class="headerlink" title="视角三：tasks"></a>视角三：tasks</h3><ol>
+<li>Commonsense reasoning comes earliest, but grows slowly</li>
+<li>Classification, Generation, Knowledge Probing are top-3 tasks</li>
+<li>Classification is a late start but growing the fastest</li>
+<li>Machine translation is relatively under-explored<ul>
+<li>Cross-lingual + encoder-decoder</li>
+</ul>
+</li>
+<li>Vision（计算机视觉）comes late, but is growing now</li>
+</ol>
+<h3 id="视角四：Training-Samples"><a href="#视角四：Training-Samples" class="headerlink" title="视角四：Training Samples"></a>视角四：Training Samples</h3><ol>
+<li>Zero-shot starts earliest, then few-shot follows</li>
+<li>Few-shot grows fastest, full data is also popular</li>
+</ol>
+<h2 id="未来发展"><a href="#未来发展" class="headerlink" title="未来发展"></a>未来发展</h2><p>what can we do?</p>
+<ol>
+<li>New Tasks：将prompt learning 放到新的任务上，任务价值？</li>
+<li>New Strategy：不同的tuning 策略</li>
+<li>New Explorations：更深入的理解<ul>
+<li>多任务Prompt learning</li>
+<li>Prompt-based Data Generation&#x2F;Bias Analysis</li>
+<li>Pre-training</li>
+</ul>
+</li>
+</ol>
 
                 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
+                    <li class="previous">
+                        <a href="/2022/07/10/RE-SA学习/" data-toggle="tooltip" data-placement="top" title="RE_SA学习">&larr; Previous Post</a>
+                    </li>
+                    
                     
                     <li class="next">
-                        <a href="/2022/07/10/RE-SA学习/" data-toggle="tooltip" data-placement="top" title="RE_SA学习">Next Post &rarr;</a>
+                        <a href="/2022/07/03/lab3总结/" data-toggle="tooltip" data-placement="top" title="BUAA_OS lab3总结">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -361,7 +430,7 @@ const myTheme = {
 
 
 const gitment = new Gitment({
-    id: 'Tue Jul 12 2022 19:08:51 GMT+0800', // optional
+    id: 'Fri Jul 08 2022 14:09:04 GMT+0800', // optional
     owner: "",
     repo: "",
     oauth: {
@@ -395,6 +464,17 @@ const gitment = new Gitment({
             <!-- Table of Contents -->
 
     
+      
+        <aside id="sidebar">
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">Contents</strong>
+          
+            
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#什么是prompt"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是prompt</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#背景"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#与之紧密联系的"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">与之紧密联系的</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#prompt-learning"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">prompt learning</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#prompt-learning-和-CV"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">prompt learning 和 CV</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#最新研究趋势"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">最新研究趋势</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#研究维度"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">研究维度</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#从不同视角看Prompt论文发表情况"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">从不同视角看Prompt论文发表情况</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#视角一：Pretrained-Language-Models"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">视角一：Pretrained Language Models</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#视角二：Tuning-Strategies"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">视角二：Tuning Strategies</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#视角三：tasks"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">视角三：tasks</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#视角四：Training-Samples"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">视角四：Training Samples</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#未来发展"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">未来发展</span></a></li></ol></li></ol>
+            
+          
+          </div>
+        </aside>
       
     
 
