@@ -18,7 +18,7 @@ Education
 * ***2020-2024, B.E., Computer Science and Technology, Beijing University of Aeronautics and Astronautics.*** \
   Graduate as the Top 1 student in my grade. \
   Beijing Outstanding Graduate.\
-  Three times First-Class Scholarship(2021, 2022, 2023).\
+  Three times First-Class Scholarship(2021, 2022, 2023).
 
 Honors and Awards
 ======
