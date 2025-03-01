@@ -33,12 +33,12 @@ Honors and Awards
 
 Publications
 ======
-* LegalAgentBench: Evaluating LLM Agents in Legal Domain
-Haitao Li*, **Junjie Chen\***, Jingli Yang, Qingyao Ai, Wei Jia, Youfeng Liu, Kai Lin, Yueyue Wu, Guozhi Yuan, Yiran Hu, Wuyue Wang, Yiqun Liu, Minlie Huang (* Equal contribution)
+* LegalAgentBench: Evaluating LLM Agents in Legal Domain <br>
+Haitao Li*, **Junjie Chen\***, Jingli Yang, Qingyao Ai, Wei Jia, Youfeng Liu, Kai Lin, Yueyue Wu, Guozhi Yuan, Yiran Hu, Wuyue Wang, Yiqun Liu, Minlie Huang (\* Equal contribution)
 
-* Calibraeval: Calibrating prediction distribution to mitigate selection bias in llms-as-judges
+* Calibraeval: Calibrating prediction distribution to mitigate selection bias in llms-as-judges <br>
 Haitao Li, **Junjie Chen**, Qingyao Ai, Zhumin Chu, Yujia Zhou, Qian Dong, Yiqun Liu
 
-* Llms-as-judges: a comprehensive survey on llm-based evaluation methods
+* Llms-as-judges: a comprehensive survey on llm-based evaluation methods <br>
 Haitao Li, Qian Dong, **Junjie Chen**, Huixue Su, Yujia Zhou, Qingyao Ai, Ziyi Ye, Yiqun Liu
 
