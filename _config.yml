@@ -13,7 +13,7 @@ title                    : "Junjie"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
-url                      : https://github.com/cjj826/cjj826.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://cjj826.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "cjj826/cjj826.github.io"
 
@@ -22,7 +22,7 @@ repository               : "cjj826/cjj826.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Junjie.png"
+  avatar           : "Junjie.jpg"
   name             : "Junjie Chen"
   pronouns         : # example: "she/her"  
   bio              : "Master at Tsinghua University"
