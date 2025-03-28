@@ -16,9 +16,9 @@ Education
 ======
 * ***2024-present, Master student, Computer Science and Technology, Tsinghua University.***
 * ***2020-2024, B.E., Computer Science and Technology, Beijing University of Aeronautics and Astronautics.*** \
-  Graduate as the Top 1 student in my grade. \
-  Beijing Outstanding Graduate.\
-  Three times First-Class Scholarship(2021, 2022, 2023).
+  * Graduate as the Top 1 student in my grade. \
+  * Beijing Outstanding Graduate.\
+  * Three times First-Class Scholarship(2021, 2022, 2023).
 
 Honors and Awards
 ======
