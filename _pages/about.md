@@ -33,21 +33,21 @@ Honors and Awards
 
 Publications
 ======
-* Enhancing LLM-Based Agents via Global Planning and Hierarchical Execution (NCIIP 2025, Best Paper)<br>
+* Enhancing LLM-Based Agents via Global Planning and Hierarchical Execution *(NCIIP 2025, Best Paper)*<br>
 **Junjie Chen**, Haitao Li, Jingli Yang, Yiqun Liu, Qingyao Ai
 
-* Overview of the NTCIR-18 Automatic Evaluation of LLMs (AEOLLM) Task (NTCIR-18)<br>
+* Overview of the NTCIR-18 Automatic Evaluation of LLMs (AEOLLM) Task *(NTCIR-18)*<br>
 **Junjie Chen**, Haitao Li, Zhumin Chu, Yiqun Liu, Qingyao Ai
 
-* LegalAgentBench: Evaluating LLM Agents in Legal Domain (ACL 2025, CCF-A)<br>
+* LegalAgentBench: Evaluating LLM Agents in Legal Domain *(ACL 2025, CCF-A)*<br>
 Haitao Li\*, **Junjie Chen\***, Jingli Yang, Qingyao Ai, Wei Jia, Youfeng Liu, Kai Lin, Yueyue Wu, Guozhi Yuan, Yiran Hu, Wuyue Wang, Yiqun Liu, Minlie Huang (\* Equal contribution)
 
-* Calibraeval: Calibrating prediction distribution to mitigate selection bias in llms-as-judges (ACL 2025, CCF-A)<br>
+* Calibraeval: Calibrating prediction distribution to mitigate selection bias in llms-as-judges *(ACL 2025, CCF-A)*<br>
 Haitao Li, **Junjie Chen**, Qingyao Ai, Zhumin Chu, Yujia Zhou, Qian Dong, Yiqun Liu
 
-* Llms-as-judges: a comprehensive survey on llm-based evaluation methods (survey)<br>
+* Llms-as-judges: a comprehensive survey on llm-based evaluation methods<br>
 Haitao Li, Qian Dong, **Junjie Chen**, Huixue Su, Yujia Zhou, Qingyao Ai, Ziyi Ye, Yiqun Liu
 
-* LexRAG: Benchmarking Retrieval-Augmented Generation in Multi-Turn Legal Consultation Conversation (SIGIR 2025, CCF-A)<br>
+* LexRAG: Benchmarking Retrieval-Augmented Generation in Multi-Turn Legal Consultation Conversation *(SIGIR 2025, CCF-A)*<br>
 Haitao Li, Yifan Chen, Yiran Hu, Qingyao Ai, **Junjie Chen**, Xiaoyu Yang, Jianhui Yang, Yueyue Wu, Zeyang Liu, Yiqun Liu
 
