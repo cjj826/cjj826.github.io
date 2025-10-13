@@ -33,6 +33,9 @@ Honors and Awards
 
 Publications
 ======
+* Simulating Dispute Mediation with LLM-Based Agents for Legal Research<br>
+**Junjie Chen**, Haitao Li, Minghao Qin, Yujia Zhou, Yanxue Ren, Wuyue Wang, Yiqun Liu, Yueyue Wu, Qingyao Ai
+
 * Enhancing LLM-Based Agents via Global Planning and Hierarchical Execution *(NCIIP 2025, Best Paper)*<br>
 **Junjie Chen**, Haitao Li, Jingli Yang, Yiqun Liu, Qingyao Ai
 
