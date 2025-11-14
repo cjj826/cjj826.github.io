@@ -22,6 +22,8 @@ Education
 
 Honors and Awards
 ======
+* 2025 Tsinghua University Comprehensive Scholarship: First Prize, 1/63.
+* 2025 Outstanding Communist Youth League Member of Tsinghua University.
 * 2024 Excellent Graduate of Beijing.
 * 2023 Special Award of Xiaomi Scholarship.
 * 2023 Highest Undergraduate Honor Shen Yuan medal.
@@ -33,7 +35,10 @@ Honors and Awards
 
 Publications
 ======
-* Simulating Dispute Mediation with LLM-Based Agents for Legal Research<br>
+* Auto-PRE: An Automatic and Cost-Efficient Peer-Review Framework for Language Generation Evaluation *(AAAI 2026, CCF-A)*<br>
+**Junjie Chen**, Weihang Su, Zhumin Chu, Haitao Li, Yujia Zhou, Dingbo Yuan, Xudong Wang, JUN ZHOU, Yiqun LIU, Min Zhang, Shaoping Ma, Qingyao Ai
+
+* Simulating Dispute Mediation with LLM-Based Agents for Legal Research *(AAAI 2026, CCF-A)*<br>
 **Junjie Chen**, Haitao Li, Minghao Qin, Yujia Zhou, Yanxue Ren, Wuyue Wang, Yiqun Liu, Yueyue Wu, Qingyao Ai
 
 * Enhancing LLM-Based Agents via Global Planning and Hierarchical Execution *(NCIIP 2025, Best Paper)*<br>
