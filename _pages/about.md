@@ -61,7 +61,7 @@ Publications
   [[Paper]](https://arxiv.org/pdf/2412.17259)[[Code]](https://github.com/CSHaitao/LegalAgentBench.)
 
 * **Calibraeval: Calibrating prediction distribution to mitigate selection bias in llms-as-judges.** <br>
-  Haitao Li, **Junjie Chen**, Qingyao Ai, Zhumin Chu, Yujia Zhou, Qian Dong, Yiqun Liu. <br>
+  Haitao Li, **Junjie Chen**, Qingyao Ai, Zhumin Chu, Yujia Zhou, Qian Dong, Yiqun Liu<br>
   **(ACL 2025 Main, Long Paper, CCF-A)**<br>
   [[Paper]](https://arxiv.org/abs/2410.15393)[[Code]](https://github.com/CSHaitao/CalibraEval)
 
