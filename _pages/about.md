@@ -59,4 +59,4 @@ Haitao Li, Qian Dong, **Junjie Chen**, Huixue Su, Yujia Zhou, Qingyao Ai, Ziyi Y
 * LexRAG: Benchmarking Retrieval-Augmented Generation in Multi-Turn Legal Consultation Conversation *(SIGIR 2025, CCF-A)*<br>
 Haitao Li, Yifan Chen, Yiran Hu, Qingyao Ai, **Junjie Chen**, Xiaoyu Yang, Jianhui Yang, Yueyue Wu, Zeyang Liu, Yiqun Liu
 
-<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=pCQY4KCKNkCf12AYjC41X8XI-YB01m1NxrMBNSgOMak"></script>
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=cKc7Wx7G5hG6Og0yBAYJLS_gR5Sc2FMlfnB9zn0pRhE&cl=ffffff&w=a"></script>
