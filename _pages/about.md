@@ -9,7 +9,7 @@ redirect_from:
 ---
 Hi! I am Junjie Chen (陈俊杰). 
 
-I am now a first year master student at Tsinghua University.  I am fortunate to be supervised by [Qingyao Ai](http://www.thuir.cn/group/~aiqy/) and [Yiqun Liu](http://www.thuir.cn/group/~YQLiu/).
+I am now a second year master student at Tsinghua University.  I am fortunate to be supervised by [Qingyao Ai](http://www.thuir.cn/group/~aiqy/) and [Yiqun Liu](http://www.thuir.cn/group/~YQLiu/).
 
 
 Education
