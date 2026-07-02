@@ -1,17 +1,29 @@
-# ✍️ Publications
+# 🎯 Paper Under Submission
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><img src='images/Auto-PRE.png' alt="Auto-PRE" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/longjudgebench.png' alt="longjudgebench" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Auto-PRE: An Automatic and Cost-Efficient Peer-Review Framework for Language Generation Evaluation](https://arxiv.org/pdf/2410.12265)
+[Benchmarking LLM-as-a-Judge for Long-Form Output Evaluation](https://arxiv.org/pdf/2606.01629)
 
-**Junjie Chen**, Weihang Su, Zhumin Chu, Haitao Li, Yujia Zhou, Dingbo Yuan, Xudong Wang, Jun Zhou, Yiqun Liu, Min Zhang, Shaoping Ma, Qingyao Ai
+**Junjie Chen**, Yuxi Dong, Haitao Li, Weihang Su, Yujia Zhou, Min Zhang, Yiqun LIU, Qingyao Ai
 
-**AAAI 2026 Main, Long Paper, CCF-A**
-
-[**Paper**](https://arxiv.org/pdf/2410.12265) | [**Code**](https://github.com/cjj826/Auto-PRE)
+[**Paper**](https://arxiv.org/pdf/2606.01629) | [**Code**](https://github.com/cjj826/LongJudgeBench)
 </div>
 </div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/MSR2.png' alt="MSR2" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Multi-Source Retrieval and Reasoning for Legal Sentencing Prediction](https://arxiv.org/pdf/2602.04690)
+
+**Junjie Chen**, Haitao Li, Qilei Zhang, Zhenghua Li, Ya Zhang, Quan Zhou, Cheng Luo, Yiqun LIU, Min Zhang, Yueyue Wu, Dongsheng Guo, Qingyao Ai
+
+[**Paper**](https://arxiv.org/pdf/2602.04690) | [**Code**](https://anonymous.4open.science/r/MSR2-FC3B)
+</div>
+</div>
+
+# ✍️ Publications
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><img src='images/AgentMediation.png' alt="AgentMediation" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -23,6 +35,19 @@
 **AAAI 2026 Main, Long Paper, CCF-A**
 
 [**Paper**](https://arxiv.org/pdf/2509.06586) | [**Code**](https://github.com/cjj826/AgentMediation)
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><img src='images/Auto-PRE.png' alt="Auto-PRE" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Auto-PRE: An Automatic and Cost-Efficient Peer-Review Framework for Language Generation Evaluation](https://arxiv.org/pdf/2410.12265)
+
+**Junjie Chen**, Weihang Su, Zhumin Chu, Haitao Li, Yujia Zhou, Dingbo Yuan, Xudong Wang, Jun Zhou, Yiqun Liu, Min Zhang, Shaoping Ma, Qingyao Ai
+
+**AAAI 2026 Main, Long Paper, CCF-A**
+
+[**Paper**](https://arxiv.org/pdf/2410.12265) | [**Code**](https://github.com/cjj826/Auto-PRE)
 </div>
 </div>
 
@@ -78,17 +103,6 @@ Haitao Li, **Junjie Chen**, Qingyao Ai, Zhumin Chu, Yujia Zhou, Qian Dong, Yiqun
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Survey</div><img src='images/llm-as-judge.png' alt="LLMs-as-Judges survey" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[LLMs-as-Judges: A Comprehensive Survey on LLM-Based Evaluation Methods](https://arxiv.org/pdf/2412.05579)
-
-Haitao Li, Qian Dong, **Junjie Chen**, Huixue Su, Yujia Zhou, Qingyao Ai, Ziyi Ye, Yiqun Liu
-
-[**Paper**](https://arxiv.org/pdf/2412.05579)
-</div>
-</div>
-
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIGIR 2025</div><img src='images/lexrag.png' alt="LexRAG" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -99,5 +113,16 @@ Haitao Li, Yifan Chen, Yiran Hu, Qingyao Ai, **Junjie Chen**, Xiaoyu Yang, Jianh
 **SIGIR 2025, Long Paper, CCF-A**
 
 [**Paper**](https://arxiv.org/pdf/2502.20640) | [**Code**](https://github.com/CSHaitao/LexRAG)
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Survey</div><img src='images/llm-as-judge.png' alt="LLMs-as-Judges survey" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[LLMs-as-Judges: A Comprehensive Survey on LLM-Based Evaluation Methods](https://arxiv.org/pdf/2412.05579)
+
+Haitao Li, Qian Dong, **Junjie Chen**, Huixue Su, Yujia Zhou, Qingyao Ai, Ziyi Ye, Yiqun Liu
+
+[**Paper**](https://arxiv.org/pdf/2412.05579)
 </div>
 </div>

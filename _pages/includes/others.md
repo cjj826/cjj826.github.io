@@ -1,5 +1,6 @@
 # 🏆 Honors and Awards
 
+- 2026 Siebel Scholarship
 - 2025 Tsinghua University Comprehensive Scholarship: First Prize, 1/63.
 - 2025 Outstanding Communist Youth League Member of Tsinghua University.
 - 2024 Excellent Graduate of Beijing.
