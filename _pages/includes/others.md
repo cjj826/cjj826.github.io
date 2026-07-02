@@ -1,4 +1,4 @@
-# Honors and Awards
+# 🏆 Honors and Awards
 
 - 2025 Tsinghua University Comprehensive Scholarship: First Prize, 1/63.
 - 2025 Outstanding Communist Youth League Member of Tsinghua University.
@@ -10,7 +10,7 @@
 - 2022 China National Scholarship.
 - 2021 China National Scholarship.
 
-# Education
+# 📖 Education
 
 - ***2024-present***, Master student, Computer Science and Technology, Tsinghua University.
 - ***2020-2024***, B.E., Computer Science and Technology, Beijing University of Aeronautics and Astronautics.

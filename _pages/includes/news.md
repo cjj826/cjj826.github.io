@@ -1,4 +1,4 @@
-# News
+# 🔥 News
 
 - *2026*: Two long papers, [Auto-PRE](https://arxiv.org/pdf/2410.12265) and [Simulating Dispute Mediation with LLM-Based Agents for Legal Research](https://arxiv.org/pdf/2509.06586), were accepted to AAAI 2026.
 - *2025*: [Enhancing LLM-Based Agents via Global Planning and Hierarchical Execution](https://arxiv.org/pdf/2504.16563) received the Best Paper Award at NCIIP 2025.
