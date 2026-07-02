@@ -1,3 +1,5 @@
+<span class='anchor' id='paper-under-submission'></span>
+
 # 🎯 Paper Under Submission
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/longjudgebench.png' alt="longjudgebench" width="100%"></div></div>
@@ -22,6 +24,8 @@
 [**Paper**](https://arxiv.org/pdf/2602.04690) | [**Code**](https://anonymous.4open.science/r/MSR2-FC3B)
 </div>
 </div>
+
+<span class='anchor' id='publications'></span>
 
 # ✍️ Publications
 

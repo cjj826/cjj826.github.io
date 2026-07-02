@@ -1,3 +1,5 @@
+<span class='anchor' id='honors-and-awards'></span>
+
 # 🏆 Honors and Awards
 
 - 2026 Siebel Scholarship
@@ -10,6 +12,8 @@
 - 2022 China Undergraduate Mathematical Contest in Modeling: First Prize of Beijing.
 - 2022 China National Scholarship.
 - 2021 China National Scholarship.
+
+<span class='anchor' id='education'></span>
 
 # 📖 Education
 

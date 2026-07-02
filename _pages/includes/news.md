@@ -1,3 +1,5 @@
+<span class='anchor' id='news'></span>
+
 # 🔥 News
 
 - *2026*: Two long papers, [Auto-PRE](https://arxiv.org/pdf/2410.12265) and [AgentMediation](https://arxiv.org/pdf/2509.06586), have been accepted at AAAI 2026.
