@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Junjie"
+title                    : "Junjie Chen"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "Junjie Chen"
+description              : &description "Master's student at Tsinghua University working on LLM evaluation, agents, and legal AI."
 url                      : https://cjj826.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "cjj826/cjj826.github.io"
@@ -340,8 +340,4 @@ tag_archive:
 
 
 # HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+# - http://jch.pen
