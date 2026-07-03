@@ -81,7 +81,7 @@
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='images/legalagentbench.png' alt="LegalAgentBench" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025 Main</div><img src='images/legalagentbench.png' alt="LegalAgentBench" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [LegalAgentBench: Evaluating LLM Agents in Legal Domain](https://arxiv.org/pdf/2412.17259)
@@ -94,7 +94,7 @@ Haitao Li\*, **Junjie Chen\***, Jingli Yang, Qingyao Ai, Wei Jia, Youfeng Liu, K
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='images/calibraeval.png' alt="CalibraEval" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025 Main</div><img src='images/calibraeval.png' alt="CalibraEval" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [CalibraEval: Calibrating Prediction Distribution to Mitigate Selection Bias in LLMs-as-Judges](https://arxiv.org/abs/2410.15393)
