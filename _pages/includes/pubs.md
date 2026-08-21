@@ -2,7 +2,7 @@
 
 <!-- # 🎯 Paper Under Submission -->
 
-<!-- <span class='anchor' id='publications'></span> -->
+<span class='anchor' id='publications'></span>
 
 # ✍️ Publications
 
