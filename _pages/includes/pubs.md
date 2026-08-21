@@ -29,7 +29,7 @@
 
 **EMNLP 2026 Main, Long Paper, THU-A**
 
-[**Paper**](https://arxiv.org/pdf/2602.04690) | [**Code**](https://anonymous.4open.science/r/MSR2-FC3B)
+[**Paper**](https://arxiv.org/pdf/2602.04690) | [**Code**](https://github.com/cjj826/MSR2)
 </div>
 </div>
 
