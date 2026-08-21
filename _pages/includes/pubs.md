@@ -111,6 +111,19 @@ Haitao Li, **Junjie Chen**, Qingyao Ai, Zhumin Chu, Yujia Zhou, Qian Dong, Yiqun
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026</div><img src='images/legalone.png' alt="legalone" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[LegalOne: A Family of Foundation Models for Reliable Legal Reasoning](https://arxiv.org/pdf/2602.00642)
+
+Haitao Li, Yifan Chen, Shuo Miao, Qian Dong, Jia Chen, Yiran HU, **Junjie Chen**, Minghao Qin, Yueyue Wu, Yujia Zhou, Qingyao Ai, Yiqun LIU
+
+**EMNLP 2026 Findings, Long Paper, THU-A**
+
+[**Paper**](https://arxiv.org/pdf/2602.00642) | [**Code**](https://github.com/CSHaitao/LegalOne)
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIGIR 2025</div><img src='images/lexrag.png' alt="LexRAG" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
