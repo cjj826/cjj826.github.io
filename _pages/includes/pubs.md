@@ -1,33 +1,37 @@
-<span class='anchor' id='paper-under-submission'></span>
+<!-- <span class='anchor' id='paper-under-submission'></span> -->
 
-# 🎯 Paper Under Submission
+<!-- # 🎯 Paper Under Submission -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/longjudgebench.png' alt="longjudgebench" width="100%"></div></div>
+<!-- <span class='anchor' id='publications'></span> -->
+
+# ✍️ Publications
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026 Main</div><img src='images/longjudgebench.png' alt="longjudgebench" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Benchmarking LLM-as-a-Judge for Long-Form Output Evaluation](https://arxiv.org/pdf/2606.01629)
 
 **Junjie Chen**, Yuxi Dong, Haitao Li, Weihang Su, Yujia Zhou, Min Zhang, Yiqun LIU, Qingyao Ai
 
+**EMNLP 2026 Main, Long Paper, THU-A**
+
 [**Paper**](https://arxiv.org/pdf/2606.01629) | [**Code**](https://github.com/cjj826/LongJudgeBench)
 </div>
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/MSR2.png' alt="MSR2" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026 Main</div><img src='images/MSR2.png' alt="MSR2" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Multi-Source Retrieval and Reasoning for Legal Sentencing Prediction](https://arxiv.org/pdf/2602.04690)
 
 **Junjie Chen**, Haitao Li, Qilei Zhang, Zhenghua Li, Ya Zhang, Quan Zhou, Cheng Luo, Yiqun LIU, Min Zhang, Yueyue Wu, Dongsheng Guo, Qingyao Ai
 
+**EMNLP 2026 Main, Long Paper, THU-A**
+
 [**Paper**](https://arxiv.org/pdf/2602.04690) | [**Code**](https://anonymous.4open.science/r/MSR2-FC3B)
 </div>
 </div>
-
-<span class='anchor' id='publications'></span>
-
-# ✍️ Publications
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><img src='images/AgentMediation.png' alt="AgentMediation" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
