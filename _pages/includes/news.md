@@ -2,6 +2,9 @@
 
 # 🔥 News
 
+- My first-authored long paper [LongJudgeBench](https://arxiv.org/pdf/2606.01629) has been accepted to EMNLP 2026 Main!
+- My first-authored long paper [MSR²](https://arxiv.org/pdf/2602.04690) has been accepted to EMNLP 2026 Main!
+- Our paper [LegalOne](https://arxiv.org/pdf/2602.00642) has been accepted to EMNLP 2026 Findings!
 - My first-authored long paper [AgentMediation](https://arxiv.org/pdf/2509.06586) has been accepted at AAAI 2026!
 - My first-authored long paper [Auto-PRE](https://arxiv.org/pdf/2410.12265) has been accepted at AAAI 2026!
 - My first-authored long paper [Enhancing LLM-Based Agents via Global Planning and Hierarchical Execution](https://arxiv.org/pdf/2504.16563) received the NCIIP 2025 **Best Paper Award**!

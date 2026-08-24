@@ -17,7 +17,7 @@
 
 # 📖 Education
 
-- ***2024-present***, Master student, Computer Science and Technology, Tsinghua University.
+- ***2024-present***, PhD student, Computer Science and Technology, Tsinghua University.
 - ***2020-2024***, B.E., Computer Science and Technology, Beijing University of Aeronautics and Astronautics.
   - Graduated as a Top 1% student in my grade.
   - Beijing Outstanding Graduate.
